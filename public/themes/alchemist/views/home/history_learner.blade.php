@@ -14,11 +14,11 @@
               <tbody>
                  @foreach (Theme::get('tutorschedule') as $obj)
                  <tr>
-                    <td><h4>{{$obj->subject}}</h4></td>
-                    <td><h4>{{$obj->level}}</h4></td>
-                    <td><h4>{{$obj->dayfull}}</h4></td>
-                    <td><h4>{{$obj->name}}</h4></td>
-                    <td><h4>{{$obj->firstname}} {{$obj->lastname}}</h4></td>
+                    <td><a href="{{url('show_detail')}}?schedule_id={{$obj->learner_schedule_id}}"><h4>{{$obj->subject}}</h4></a></td>
+                    <td><a href="{{url('show_detail')}}?schedule_id={{$obj->learner_schedule_id}}"><h4>{{$obj->level}}</h4></a></td>
+                    <td><a href="{{url('show_detail')}}?schedule_id={{$obj->learner_schedule_id}}"><h4>{{$obj->dayfull}}</h4><</a>/td>
+                    <td><a href="{{url('show_detail')}}?schedule_id={{$obj->learner_schedule_id}}"><h4>{{$obj->name}}</h4></a></td>
+                    <td><a href="{{url('show_detail')}}?schedule_id={{$obj->learner_schedule_id}}"><h4>{{$obj->firstname}} {{$obj->lastname}}</h4></a></td>
                  </tr>
                  @endforeach
               </tbody>
